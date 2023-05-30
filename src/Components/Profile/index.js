@@ -159,7 +159,7 @@ class Profile extends Component {
     }
     return (
       <TextContainer>
-        <p>YOU LOOSE</p>
+        <p>YOU LOSE</p>
         <NormalButton onClick={this.change2}>PLAY AGAIN</NormalButton>
       </TextContainer>
     )
@@ -177,33 +177,24 @@ class Profile extends Component {
             <li>SCISSORS</li>
           </HeaderContent>
           <ScoreCard>
-            <h1>score</h1>
-            <h1>{score}</h1>
+            <p>Score</p>
+            <p>{score}</p>
           </ScoreCard>
         </Header>
         {condition ? (
           <ImgContainer>
-            <CustomButton1
-              onClick={this.changeUrl}
-              data-testid="rockButton"
-              value={choicesList[0].id}
-            >
+            <CustomButton1 onClick={this.changeUrl} data-testid="rockButton">
               <Img src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rock-image.png" />
             </CustomButton1>
 
             <CustomButton1
               onClick={this.changeUrl}
               data-testid="scissorsButton"
-              value={choicesList[1].id}
             >
               <Img src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/scissor-image.png" />
             </CustomButton1>
 
-            <CustomButton1
-              onClick={this.changeUrl}
-              data-testid="paperButton"
-              value={choicesList[2].id}
-            >
+            <CustomButton1 onClick={this.changeUrl} data-testid="paperButton">
               <Img src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/paper-image.png" />
             </CustomButton1>
           </ImgContainer>
@@ -231,7 +222,7 @@ class Profile extends Component {
             modal
             trigger={
               <NormalButton type="button" className="trigger-button">
-                Trigger
+                Rules
               </NormalButton>
             }
           >
